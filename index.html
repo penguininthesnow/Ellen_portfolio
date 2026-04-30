@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ellen Portfolio</title>
+  <link rel="icon" href="./penguininthesnow_logo2.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {opacity:0; transform:translateY(20px); transition: all 0.8s ease;}
+    .fade-in.show {opacity:1; transform:translateY(0);}
+  </style>
+</head>
+<body class="bg-slate-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full flex justify-between items-center p-4 bg-slate-900/80 backdrop-blur z-50">
+    <div class="flex items-center gap-3 text-lg font-bold">
+      <!-- Logo Image -->
+      <img src="./penguininthesnow_logo2.png" alt="logo" class="w-8 h-8 object-contain drop-shadow-md">
+      
+      <!-- Gradient Title -->
+      <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent text-xl tracking-wide">
+        Ellen Portfolio
+      </span>
+    </div>
+
+    <select onchange="setLang(this.value)" class="bg-slate-800 text-white px-3 py-1 rounded">
+      <option value="zh">中文</option>
+      <option value="en">English</option>
+      <option value="jp">日本語</option>
+    </select>
+  </nav>
+
+  <!-- Hero -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 fade-in bg-slate-900">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4" 
+      data-zh="後端工程師" 
+      data-en="Backend Engineer" 
+      data-jp="バックエンドエンジニア">後端工程師</h1>
+
+    <p class="text-gray-300 max-w-xl mb-6" 
+      data-zh="專注於 Python / FastAPI / AWS 的後端工程師" 
+      data-en="Focused on Python / FastAPI / AWS" 
+      data-jp="Python / FastAPI / AWS に特化">
+      專注於 Python / FastAPI / AWS 的後端工程師
+    </p>
+
+    <div class="flex gap-4">
+      <a href="#projects" class="bg-blue-500 px-6 py-2 rounded-2xl"
+        data-zh="查看作品"
+        data-en="View Projects"
+        data-jp="プロジェクトを見る">查看作品</a>
+
+      <a href="#contact" class="border border-white px-6 py-2 rounded-2xl"
+        data-zh="聯絡我"
+        data-en="Contact"
+        data-jp="お問い合わせ">聯絡我</a>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="py-20 px-6 text-center fade-in bg-slate-800">
+    <h2 class="text-3xl font-bold mb-10"
+      data-zh="技能"
+      data-en="Skills"
+      data-jp="スキル">Skills</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+      <div class="p-4 bg-slate-700 rounded-xl">Python</div>
+      <div class="p-4 bg-slate-700 rounded-xl">FastAPI</div>
+      <div class="p-4 bg-slate-700 rounded-xl">MySQL</div>
+      <div class="p-4 bg-slate-700 rounded-xl">AWS</div>
+      <div class="p-4 bg-slate-700 rounded-xl">Docker</div>
+      <div class="p-4 bg-slate-700 rounded-xl">JavaScript</div>
+      <div class="p-4 bg-slate-700 rounded-xl">HTML/CSS</div>
+      <div class="p-4 bg-slate-700 rounded-xl">Git</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 px-6 fade-in bg-slate-900">
+    <h2 class="text-3xl font-bold text-center mb-10"
+      data-zh="專案"
+      data-en="Projects"
+      data-jp="プロジェクト">Projects</h2>
+
+    <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+
+      <div class="bg-slate-800 rounded-2xl p-6">
+        <h3 class="text-xl font-bold mb-2">Safetrack</h3>
+        <p class="text-gray-300 mb-4"
+          data-zh="工安通報與管理系統"
+          data-en="Safety reporting and management system"
+          data-jp="安全報告および管理システム">
+          工安通報與管理系統
+        </p>
+        <div class="flex gap-4">
+          <a href="https://www.penguinthesnow.com/" target="_blank" class="underline"
+            data-zh="即時展示"
+            data-en="Live Demo"
+            data-jp="デモ">即時展示</a>
+          <a href="https://github.com/penguininthesnow/Safetrack" target="_blank" class="text-gray-400 underline">GitHub</a>
+        </div>
+      </div>
+
+      <div class="bg-slate-800 rounded-2xl p-6">
+        <h3 class="text-xl font-bold mb-2">Taipei Day Trip</h3>
+        <p class="text-gray-300 mb-4"
+          data-zh="旅遊景點查詢與預訂平台"
+          data-en="Travel attraction booking platform"
+          data-jp="旅行予約プラットフォーム">
+          旅遊景點查詢與預訂平台
+        </p>
+        <div class="flex gap-4">
+          <a href="http://54.174.188.58" target="_blank" class="underline"
+            data-zh="即時展示"
+            data-en="Live Demo"
+            data-jp="デモ">即時展示</a>
+          <a href="https://github.com/penguininthesnow/Taipei-Day-Trip" target="_blank" class="text-gray-400 underline">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 text-center fade-in bg-slate-800">
+    <h2 class="text-3xl font-bold mb-4"
+      data-zh="聯絡我"
+      data-en="Contact"
+      data-jp="お問い合わせ">Contact</h2>
+
+    <p class="text-gray-300 mb-6"
+      data-zh="歡迎聯絡我討論合作或工作機會"
+      data-en="Feel free to reach out for opportunities"
+      data-jp="お気軽にご連絡ください">
+      歡迎聯絡我討論合作或工作機會
+    </p>
+
+    <a href="mailto:chouuu0976286138@gmail.com" class="bg-blue-500 px-6 py-2 rounded-2xl"
+      data-zh="寄信給我"
+      data-en="Email Me"
+      data-jp="メールする">寄信給我</a>
+  </section>
+
+  <footer class="text-center py-6 text-gray-400 bg-slate-900">
+    © 2026 penguininthesnow
+  </footer>
+
+  <script>
+    // Scroll animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Language switch
+    function setLang(lang){
+      document.querySelectorAll('[data-zh]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+    }
+  </script>
+
+</body>
+</html>
