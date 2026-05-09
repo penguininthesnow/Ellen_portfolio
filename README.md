@@ -1,5 +1,4 @@
 # 🐧 Ellen_portfolio
-個人簡歷
 
 由工安背景轉職後端工程師，擅長將實務流程轉化為系統解決方案，專注於 Python / FastAPI / AWS
 
